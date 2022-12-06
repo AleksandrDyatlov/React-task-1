@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site
+// -----------------------------------------------------------------------------
+
+.header {
+	padding: 48px 0 38px;
+	background-color: $gray-700;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.logo {
+	display: block;
+	width: 87px;
+	margin-left: 44px;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.main-nav {
+	@extend %listreset;
+
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 18px;
+	font-weight: 400;
+
+	li {
+		padding-left: 42px;
+
+		&.active {
+			a {
+				font-weight: 700;
+				color: $gray-100;
+			}
+		}
+	}
+
+	a {
+		color: rgba($gray-100, 0.5);
+
+		&:hover {
+			color: $gray-100;
+		}
+	}
+}

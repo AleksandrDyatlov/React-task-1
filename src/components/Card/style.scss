@@ -1,0 +1,127 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card of the site
+// -----------------------------------------------------------------------------
+
+.card-wrapp {
+	padding: 40px 0 200px;
+
+	.card.card-horizontal {
+		margin-bottom: 76px;
+	}
+
+	.btn-holder {
+		text-align: center;
+
+		.btn {
+			min-width: 288px;
+		}
+	}
+}
+
+.grid {
+	column-count: 3;
+	column-gap: 76px;
+	orphans: 1;
+	widows: 1;
+
+	.col {
+		display: inline-block;
+		width: 100%;
+		padding: 0 0 76px;
+	}
+}
+
+.card {
+	$self: &;
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: $gray-800;
+
+	&.card-horizontal {
+		display: flex;
+		flex-direction: row-reverse;
+
+		#{$self}-holder {
+			width: 52.5%;
+			padding: 84px 60px 30px 74px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		#{$self}-body {
+			padding: 0 0 26px;
+		}
+
+		#{$self}-footer {
+			padding: 0;
+		}
+
+		#{$self}-img {
+			width: 47.5%;
+			object-fit: cover;
+		}
+
+		#{$self}-title {
+			margin-bottom: 24px;
+		}
+
+		#{$self}-text {
+			padding-right: 0;
+		}
+	}
+
+	&-img {
+		display: block;
+		width: 100%;
+	}
+
+	&-body {
+		padding: 30px 33px;
+	}
+
+	&-title {
+		font-size: 21px;
+		line-height: 1.5238;
+		margin-bottom: 15px;
+	}
+
+	&-text {
+		color: rgba($white, 0.7);
+		margin: 0;
+		padding-right: 40px;
+	}
+
+	&-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 33px 30px;
+	}
+
+	&-info {
+		@extend %listreset;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-size: 12px;
+		line-height: 1.4;
+		font-weight: 400;
+
+		li {
+			padding-left: 22px;
+			display: flex;
+			align-items: center;
+		}
+
+		i {
+			margin-right: 10px;
+			display: block;
+			line-height: 1;
+		}
+	}
+}

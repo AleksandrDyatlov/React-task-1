@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the common layout of the site
+// -----------------------------------------------------------------------------
+
+body {
+	background-color: $body-bg;
+	font-weight: $font-weight-light;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.container {
+	max-width: $container-max-width;
+	margin: 0 auto;
+	padding: 0 $gutter;
+}
+
