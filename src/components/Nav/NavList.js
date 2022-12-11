@@ -1,12 +1,12 @@
 import React from 'react'
 
-function NavList({children}) {
+function NavList({children, style}) {
+	const listStyle = style === 'main-nav' ? 'main-nav': 'footer-nav';
+
 	return (
-		<nav className="navbar">
-			<ul className="main-nav">
-				{children}
-			</ul>
-		</nav>
+		<ul className={listStyle}>
+			{children}
+		</ul>
 	)
 }
 

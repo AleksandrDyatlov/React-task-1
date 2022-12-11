@@ -1,5 +1,7 @@
 import React from 'react'
+
 import './style.scss'
+import {IconView, IconComment} from '../Icons';
 
 function Card({style, img, title, text, linkUrl, views, comments}) {
 	const cardStyle = style === 'horizontal' ? 'card card-horizontal': 'card';
@@ -16,11 +18,11 @@ function Card({style, img, title, text, linkUrl, views, comments}) {
 					<a className="btn btn-more" href={linkUrl}>Read more</a>
 					<ul className="card-info">
 						<li>
-							<i className="icon-eye"></i>
+							<IconView />
 							{views}
 						</li>
 						<li>
-							<i className="icon-comment"></i>
+							<IconComment />
 							{comments}
 						</li>
 					</ul>

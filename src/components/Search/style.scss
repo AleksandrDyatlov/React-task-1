@@ -6,14 +6,17 @@
 	position: relative;
 
 	label {
-		@include transition(color);
-		color: rgba($gray-100, 0.6);
 		position: absolute;
 		left: 17px;
 		top: 50%;
 		transform: translateY(-50%);
-		font-size: 18px;
-		line-height: 1;
+
+		svg {
+			@include transition(fill);
+
+			fill: $gray-100;
+			display: block;
+		}
 	}
 
 	input {
@@ -38,7 +41,9 @@
 			border-color: $gray-100;
 
 			~ label {
-				color: $gray-100;
+				svg {
+					fill: $white;
+				}
 			}
 		}
 

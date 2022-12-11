@@ -1,14 +1,17 @@
 import React from 'react'
+
 import './style.scss';
 
-function Header({children}) {
+function Header({children, logoUrl}) {
 	return (
 		<header className="header">
 			<div className="container">
 				<strong className="logo">
-					<a href="#"><img src="images/logo.svg" alt="My App" /></a>
+					<a href="#"><img src={logoUrl} alt="My App" /></a>
 				</strong>
-				{children}
+				<nav className="navbar">
+					{children}
+				</nav>
 			</div>
 		</header>
 	)

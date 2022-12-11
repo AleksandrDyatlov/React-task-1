@@ -118,10 +118,10 @@
 			align-items: center;
 		}
 
-		i {
+		svg {
 			margin-right: 10px;
 			display: block;
-			line-height: 1;
+			fill: $white;
 		}
 	}
 }

@@ -1,10 +1,11 @@
 import React from 'react'
-import './style.scss'
 
-function Intro() {
+import './style.scss';
+
+function Intro({img}) {
 	return (
 		<div className="intro">
-			<img src="images/intro-img.jpg" alt="image description" />
+			<img src={img} alt="image description" />
 		</div>
 	)
 }
